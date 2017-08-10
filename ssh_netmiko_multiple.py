@@ -35,6 +35,6 @@ start_time = datetime.datetime
 for device in all_devices:
     net_connect = ConnectHandler(**device)
     output = net_connect.send_command("show interface brief")
-    print("\n\n>>>>>>>>> Device {0} <<<<<<<<<".format(device['ip'])
+    print("\n\n>>>>>>>>> Device {0} <<<<<<<<<".format(device['ip']))
     print(output)
     print(">>>>>>>>> End <<<<<<<<<")
