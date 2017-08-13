@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: False
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  become_method: sudo
+  
+  tasks:
+    - name: Install tree
+      raw: test -e /usr/bin/tree || (apt-get update && apt-get install -y tree)
